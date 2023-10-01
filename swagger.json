@@ -215,13 +215,13 @@
                 "lastName": {
                   "example": "any"
                 },
-                "favoriteClass": {
+                "class": {
                   "example": "any"
                 },
                 "wandCore": {
                   "example": "any"
                 },
-                "wandWoodType": {
+                "wandMaterial": {
                   "example": "any"
                 },
                 "birthday": {
@@ -290,13 +290,13 @@
                 "lastName": {
                   "example": "any"
                 },
-                "favoriteClass": {
+                "class": {
                   "example": "any"
                 },
                 "wandCore": {
                   "example": "any"
                 },
-                "wandWoodType": {
+                "wandMaterial": {
                   "example": "any"
                 },
                 "birthday": {

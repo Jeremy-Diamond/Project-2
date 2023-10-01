@@ -47,9 +47,6 @@ const getSingleTeacher = async (req, res) => {
 const createTeacher = async (req, res) => {
     //#swagger.tags=['teachers]
   try {
-    if (!ObjectId.isValid(req.params.id)) {
-      res.status(400).json({ message: "Must use valid Id" });
-    };
     const teacher = {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
