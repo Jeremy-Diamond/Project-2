@@ -99,11 +99,11 @@ const updateTeacher = async (req, res) => {
 
 const deleteTeacher = async (req, res) => {
     //#swagger.tags=['teachers]
-  const teacherId = new ObjectId(req.params.id);
-  try {
-    if (!ObjectId.isValid(req.params.id)) {
-      res.status(400).json({ message: "Must use valid Id" });
-    }
+    try {
+      if (!ObjectId.isValid(req.params.id)) {
+        res.status(400).json({ message: "Must use valid Id" });
+      }
+    const teacherId = new ObjectId(req.params.id);
     const result = await mongodb
       .getDb()
       .db()
