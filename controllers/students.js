@@ -20,6 +20,9 @@ const getAllStudents = async (req, res) => {
 const getSingleStudent = async (req, res) => {
     //#swagger.tags=['students]
     try {
+      if (!ObjectId.isValid(req.params.id)) {
+        res.status(400).json({ message: "Must use valid Id" });
+      }
       const studentId = new ObjectId(req.params.id);
       const result = await mongodb
         .getDb()
@@ -67,6 +70,9 @@ const createStudent = async (req, res) => {
 const updateStudent = async (req, res) => {
     //#swagger.tags=['students]
   try {
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json({ message: "Must use valid Id" });
+    };
       // Log the incoming JSON data for debugging
      // console.log("Incoming JSON Data:", req.body);
       //console.log("test")
@@ -95,6 +101,9 @@ const deleteStudent = async (req, res) => {
     //#swagger.tags=['students]
   const studentId = new ObjectId(req.params.id);
   try {
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json({ message: "Must use valid Id" });
+    };
     const result = await mongodb
       .getDb()
       .db()

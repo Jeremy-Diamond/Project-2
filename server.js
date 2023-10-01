@@ -20,7 +20,10 @@ app.use((req, res,next) => {
 
 app.use('/',require('./routes'));
 
-
+//catch all errors, copied from node js site
+process.on('uncaughtException', (err, origin) => {
+  console.log(process.stderr.fd, `Caught exception: ${err}\n` + `Exception origin: ${origin}`);
+});
 
 mongodb.initDb((err) => {
   if (err) {
