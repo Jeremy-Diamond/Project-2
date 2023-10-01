@@ -61,7 +61,7 @@ const createStudent = async (req, res) => {
       .db()
       .collection("students")
       .insertOne(student);
-    res.status(204).json(result);
+    res.status(200).json(result);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
@@ -91,7 +91,7 @@ const updateStudent = async (req, res) => {
       .db()
       .collection("students")
       .replaceOne({ _id: studentId }, updatedstudent);
-    res.status(200).json(result);
+    res.status(204).json(result);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
