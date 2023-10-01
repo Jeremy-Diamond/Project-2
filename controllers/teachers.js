@@ -70,6 +70,9 @@ const createTeacher = async (req, res) => {
 const updateTeacher = async (req, res) => {
     //#swagger.tags=['teachers]
   try {
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json({ message: "Must use valid Id" });
+    }
       // Log the incoming JSON data for debugging
      // console.log("Incoming JSON Data:", req.body);
       //console.log("test")
