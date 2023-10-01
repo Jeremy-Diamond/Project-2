@@ -9,7 +9,7 @@ const getAllTeachers = async (req, res) => {
     //console.log(result)
     result.toArray().then((teachers) => {
       res.setHeader("Content-Type", "application/json");
-      res.status(204).json(teachers);
+      res.status(200).json(teachers);
       //console.log(teachers)
     });
   } catch (err) {
@@ -38,7 +38,7 @@ const getSingleTeacher = async (req, res) => {
       }
   
       res.setHeader("Content-Type", "application/json");
-      res.status(204).json(teachers[0]);
+      res.status(200).json(teachers[0]);
     } catch (err) {
       res.status(500).json({ message: err.message });
     }
@@ -64,7 +64,7 @@ const createTeacher = async (req, res) => {
       .db()
       .collection("Teachers")
       .insertOne(teacher);
-    res.status(204).json(result);
+    res.status(200).json(result);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }

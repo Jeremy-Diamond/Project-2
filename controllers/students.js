@@ -9,7 +9,7 @@ const getAllStudents = async (req, res) => {
     console.log(result)
     result.toArray().then((students) => {
       res.setHeader("Content-Type", "application/json");
-      res.status(204).json(students);
+      res.status(200).json(students);
       console.log(students)
     });
   } catch (err) {
@@ -38,7 +38,7 @@ const getSingleStudent = async (req, res) => {
       }
   
       res.setHeader("Content-Type", "application/json");
-      res.status(204).json(students[0]);
+      res.status(200).json(students[0]);
     } catch (err) {
       res.status(500).json({ message: err.message });
     }
@@ -91,7 +91,7 @@ const updateStudent = async (req, res) => {
       .db()
       .collection("students")
       .replaceOne({ _id: studentId }, updatedstudent);
-    res.status(204).json(result);
+    res.status(200).json(result);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
