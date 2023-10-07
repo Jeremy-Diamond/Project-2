@@ -5,16 +5,16 @@
     "description": "This is the API for Hogwarts School of Witchcraft and Wizardry.",
     "version": "1.0.0"
   },
-  "host": "project-2-hogwarts-regestry.onrender.com",
+  "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
     "/": {
       "get": {
         "tags": [
-          "Site Test"
+          "Hello World"
         ],
         "description": "",
         "responses": {
@@ -26,7 +26,7 @@
     },
     "/students/": {
       "get": {
-        "tags": ["Students"],
+        "tags": ["students"],
         "description": "",
         "produces": [
           "application/json"
@@ -34,6 +34,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
           },
           "404": {
             "description": "Not Found"
@@ -44,7 +47,7 @@
         }
       },
       "post": {
-        "tags": ["Students"],
+        "tags": ["students"],
         "description": "",
         "parameters": [
           {
@@ -79,8 +82,14 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "412": {
+            "description": "Precondition Failed"
           },
           "500": {
             "description": "Internal Server Error"
@@ -90,7 +99,7 @@
     },
     "/students/{id}": {
       "get": {
-        "tags": ["Students"],
+        "tags": ["students"],
         "description": "",
         "produces": [
           "application/json"
@@ -113,7 +122,7 @@
         }
       },
       "put": {
-        "tags": ["Students"],
+        "tags": ["students"],
         "description": "",
         "parameters": [
           {
@@ -121,41 +130,17 @@
             "in": "path",
             "required": true,
             "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "firstName": {
-                  "example": "any"
-                },
-                "lastName": {
-                  "example": "any"
-                },
-                "favoriteClass": {
-                  "example": "any"
-                },
-                "wandCore": {
-                  "example": "any"
-                },
-                "wandMaterial": {
-                  "example": "any"
-                },
-                "birthday": {
-                  "example": "any"
-                },
-                "hogwartsHouse": {
-                  "example": "any"
-                }
-              }
-            }
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "412": {
+            "description": "Precondition Failed"
           },
           "500": {
             "description": "Internal Server Error"
@@ -163,7 +148,7 @@
         }
       },
       "delete": {
-        "tags": ["Students"],
+        "tags": ["students"],
         "description": "",
         "parameters": [
           {
@@ -182,7 +167,7 @@
     },
     "/teachers/": {
       "get": {
-        "tags": ["Teachers"],
+        "tags": ["teachers"],
         "description": "",
         "produces": [
           "application/json"
@@ -190,6 +175,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
           },
           "404": {
             "description": "Not Found"
@@ -200,7 +188,7 @@
         }
       },
       "post": {
-        "tags": ["Teachers"],
+        "tags": ["teachers"],
         "description": "",
         "parameters": [
           {
@@ -215,13 +203,13 @@
                 "lastName": {
                   "example": "any"
                 },
-                "class": {
+                "favoriteClass": {
                   "example": "any"
                 },
                 "wandCore": {
                   "example": "any"
                 },
-                "wandMaterial": {
+                "wandWoodType": {
                   "example": "any"
                 },
                 "birthday": {
@@ -235,8 +223,14 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "412": {
+            "description": "Precondition Failed"
           },
           "500": {
             "description": "Internal Server Error"
@@ -246,7 +240,7 @@
     },
     "/teachers/{id}": {
       "get": {
-        "tags": ["Teachers"],
+        "tags": ["teachers"],
         "description": "",
         "produces": [
           "application/json"
@@ -269,7 +263,7 @@
         }
       },
       "put": {
-        "tags": ["Teachers"],
+        "tags": ["teachers"],
         "description": "",
         "parameters": [
           {
@@ -278,7 +272,7 @@
             "required": true,
             "type": "string"
           },
-          {
+                    {
             "name": "body",
             "in": "body",
             "schema": {
@@ -290,13 +284,13 @@
                 "lastName": {
                   "example": "any"
                 },
-                "class": {
+                "favoriteClass": {
                   "example": "any"
                 },
                 "wandCore": {
                   "example": "any"
                 },
-                "wandMaterial": {
+                "wandWoodType": {
                   "example": "any"
                 },
                 "birthday": {
@@ -310,8 +304,14 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "412": {
+            "description": "Precondition Failed"
           },
           "500": {
             "description": "Internal Server Error"
@@ -319,7 +319,7 @@
         }
       },
       "delete": {
-        "tags": ["Teachers"],
+        "tags": ["teachers"],
         "description": "",
         "parameters": [
           {
