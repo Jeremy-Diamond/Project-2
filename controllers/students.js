@@ -1,16 +1,18 @@
 const mongodb = require("../db/connect");
 const ObjectId = require("mongodb").ObjectId; // get primary key
 
+const {isauthenticated} = require('../middleware/authenticate')
+
 const getAllStudents = async (req, res) => {
     //#swagger.tags=['students]
   try {
-    console.log("get all test")
+    //console.log("get all test")
     const result = await mongodb.getDb().db().collection("students").find();
-    console.log(result)
+    //console.log(result)
     result.toArray().then((students) => {
       res.setHeader("Content-Type", "application/json");
       res.status(200).json(students);
-      console.log(students)
+      //console.log(students)
     });
   } catch (err) {
     res.status(500).json({ message: err.message });

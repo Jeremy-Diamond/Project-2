@@ -1,6 +1,8 @@
 const mongodb = require("../db/connect");
 const ObjectId = require("mongodb").ObjectId; // get primary key
 
+const {isauthenticated} = require('../middleware/authenticate')
+
 const getAllTeachers = async (req, res) => {
     //#swagger.tags=['teachers]
   try {
