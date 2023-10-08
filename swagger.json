@@ -11,19 +11,6 @@
     "https"
   ],
   "paths": {
-    "/": {
-      "get": {
-        "tags": [
-          "Hello World"
-        ],
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/students/": {
       "get": {
         "tags": ["students"],
@@ -130,6 +117,36 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+           {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
+                  "example": "any"
+                },
+                "favoriteClass": {
+                  "example": "any"
+                },
+                "wandCore": {
+                  "example": "any"
+                },
+                "wandMaterial": {
+                  "example": "any"
+                },
+                "birthday": {
+                  "example": "any"
+                },
+                "hogwartsHouse": {
+                  "example": "any"
+                }
+              }
+            }
           }
         ],
         "responses": {
@@ -271,8 +288,7 @@
             "in": "path",
             "required": true,
             "type": "string"
-          },
-                    {
+          }, {
             "name": "body",
             "in": "body",
             "schema": {
