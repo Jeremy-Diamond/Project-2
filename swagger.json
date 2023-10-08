@@ -220,7 +220,7 @@
                 "lastName": {
                   "example": "any"
                 },
-                "favoriteClass": {
+                "class": {
                   "example": "any"
                 },
                 "wandCore": {
@@ -300,7 +300,7 @@
                 "lastName": {
                   "example": "any"
                 },
-                "favoriteClass": {
+                "class": {
                   "example": "any"
                 },
                 "wandCore": {
