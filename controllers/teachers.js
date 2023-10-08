@@ -54,7 +54,7 @@ const createTeacher = async (req, res) => {
       lastName: req.body.lastName,
       class: req.body.favoriteClass,
       wandCore: req.body.wandCore,
-      wandMaterial: req.body.wandWoodType,
+      wandMaterial: req.body.wandMaterial,
       birthday: req.body.birthday,
       hogwartsHouse: req.body.hogwartsHouse,
     };
@@ -84,7 +84,7 @@ const updateTeacher = async (req, res) => {
       lastName: req.body.lastName,
       class: req.body.favoriteClass,
       wandCore: req.body.wandCore,
-      wandMaterial: req.body.wandWoodType,
+      wandMaterial: req.body.wandMaterial,
       birthday: req.body.birthday,
       hogwartsHouse: req.body.hogwartsHouse,
     };
