@@ -5,10 +5,10 @@
     "description": "This is the API for Hogwarts School of Witchcraft and Wizardry.",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "project-2-hogwarts-regestry.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/": {
